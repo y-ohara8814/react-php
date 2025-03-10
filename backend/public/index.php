@@ -11,13 +11,6 @@ header('Content-Type: application/json');
 
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-echo json_encode([
-    "requested_path" => $path,
-    "server_uri" => $_SERVER["REQUEST_URI"],
-    "method" => $_SERVER['REQUEST_METHOD']
-]);
-exit;
-
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && $path === '/todos') {
     $todos = json_decode(file_get_contents(__DIR__ . '/todos.json'), true);
     echo json_encode($todos);
