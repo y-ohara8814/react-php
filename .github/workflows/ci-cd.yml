@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - dev/add_todosystem
 
 jobs:
   build_and_push_ecr:
@@ -23,7 +24,7 @@ jobs:
 
       # ECRにログイン
       - name: Login to Amazon ECR
-        uses: docker/login-action@v3  
+        uses: docker/login-action@v3
         with:
           registry: 488556175634.dkr.ecr.ap-northeast-1.amazonaws.com
           username: AWS
