@@ -39,8 +39,8 @@ jobs:
       # Reactアプリをビルドし、成果物を backend/public にコピー
       - name: Build React frontend
         run: |
-          cd frontend
-          npm install
+          cd ./frontend
+          npm ci
           npm run build
           rm -rf ../backend/public/*
           cp -r dist/* ../backend/public/
