@@ -21,7 +21,7 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 WORKDIR /var/www/html
 
 # Reactのビルド結果をコピー（静的ファイル）
-COPY --from=frontend-builder /app/dist/ /var/www/html/
+# COPY --from=frontend-builder /app/dist/ /var/www/html/
 
 # PHPファイルを配置
 COPY ./public/ /var/www/html/
