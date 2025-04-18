@@ -8,7 +8,7 @@
     "memory": "512",
     "containerDefinitions": [
       {
-        "name": "backend",
+        "name": "my-app-backend",
         "image": "<IMAGE_URI>",
         "cpu": 128,
         "memory": 256,
